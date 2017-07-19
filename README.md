@@ -2,7 +2,7 @@
 
 #### An Epicodus team week project proposal utilizing Angular2, 07.10.17
 
-#### **By Anabel Ramirez (add contributors here)**
+#### **By Anabel Ramirez, Ethan, Jenna, Dylan**
 
 ## Description
 
@@ -14,8 +14,8 @@ This web application will allow two players to play the card game Hanafuda. The 
 |---|:---|:---|
 |Game will have a deck of 48 cards.| 48 cards|48 cards|
 |Game will have two players.| Player1, Player2|Player1, Player2|
-|Eight cards are placed face up between the players on the playing field.| 8 cards face up middle of table | 8 cards face up middle of table|
 |Eight cards are dealt face-down to each player.| Player1: 8cards, Player2: 8 cards|Player1: 8cards, Player2: 8 cards|
+|Player with earliest birthday is the dealer.|Player1=Jan, Player2=March|Player1 is dealer|
 |Play starts with the dealer and proceeds counterclockwise.| Player1, clockwise is Player2|Player1, clockwise is Player2|
 |The player takes a card that was dealt to them and matches suit with a card that is on the table.|"Matsu" match to "Poetry Ribbon" in January suit|"Matsu" match to "Poetry Ribbon" in January suit|
 |If there isn't a matching card, the player discards a card to the center of the table.|"discards card to center of table"|"top stock card is turned face up"|
@@ -32,9 +32,17 @@ This web application will allow two players to play the card game Hanafuda. The 
 |the winner of the match gets all the points the opponent has accumulated in that round.|Player1 wins round|Player1 + Player2 tally for the round|
 |In case of a tie, dealer wins.|Player1 tally = Player2 tally|Dealer wins|
 
+## Further Exploration
+
+|Behavior|Input|Output|
+|---|:---|:---|
+|User can view scores of several games.| 3 games played|score, score, score|
+|User can view accumulated score of several games.| 3 games played|totaled score|
+|User can see their place on a leaderboard.| 3 games played, totaled score|totaled score placement on leaderboard|
+|User can play Yaku with the deck.| click choose game|select Yaku game|
 
 
-## Cards
+## Card Database
 There are twelve suits, representing months. Each is designated by a flower, and each suit has four cards. Typically, each suit will have two normal cards and two special cards. The point values could be considered unnecessary and arbitrary, as the most popular games only concern themselves with certain combinations of taken cards. For this project, we will start with the point values.
 
 |Month|Flower|Cards|
