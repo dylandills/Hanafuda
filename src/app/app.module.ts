@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {ViewEncapsulation} from '@angular/core';
+import { SwingModule } from 'angular2-swing';
 
 import { AppComponent } from './app.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
@@ -33,7 +34,8 @@ import { HandComponent } from './hand/hand.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    SwingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
