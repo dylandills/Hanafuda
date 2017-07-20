@@ -47,7 +47,6 @@ export class CardService {
   * Shuffle the cards in the array.
   * Draw a card from the shuffled deck.
   */
-
   // draw() { // Draw a card from the shuffled deck.
   //   var myDeck = new Deck([CARDS]);
   //   myDeck.shuffle();

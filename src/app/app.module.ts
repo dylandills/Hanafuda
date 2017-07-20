@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { PlayfieldComponent } from './playfield/playfield.component';
+import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardComponent } from './card/card.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
@@ -17,6 +19,8 @@ import { HandComponent } from './hand/hand.component';
 @NgModule({
   declarations: [
     AppComponent,
+    PlayfieldComponent,
+    CardDetailComponent,
     CardComponent,
     WelcomeComponent,
     HowToPlayComponent,
