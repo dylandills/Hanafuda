@@ -1,4 +1,5 @@
 <h2>PlayField</h2>
-<div *ngFor="let card of cards">
-  <h4><em>{{card.image}}</em></h4>
+
+<div *ngFor="let card of cards" (click)="goToDetailPage(card)">
+  <div><em>{{card.image}}</em><div>
 </div>
