@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
-import { History } from './history/history.component';
+import { HistoryComponent } from './history/history.component';
 import { CardComponent } from './card/card.component';
 import { HandComponent } from './hand/hand.component';
 import { PlayFieldComponent } from './play-field/play-field.component';
@@ -14,39 +14,39 @@ import {Player2Component } from './player2/player2.component';
 
 const appRoutes: Routes = [
   {
-    path '',
+    path: '',
     component: WelcomeComponent
   },
   {
-    path 'about',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path 'how-to-play',
+    path: 'how-to-play',
     component: HowToPlayComponent
   },
   {
-    path 'history',
+    path: 'history',
     component: HistoryComponent
   },
   {
-    path 'card',
+    path: 'card',
     component: CardComponent
   },
   {
-    path 'hand',
+    path: 'hand',
     component: HandComponent
   },
   {
-    path 'play-field',
+    path: 'play-field',
     component: PlayFieldComponent
   },
   {
-    path 'player1',
+    path: 'player1',
     component: Player1Component
   },
   {
-    path 'player2',
+    path: 'player2',
     component: Player2Component
   },
  ];

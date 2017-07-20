@@ -1,6 +1,6 @@
 import { Card } from './card.model';
 
-export const CARDS: Card[] =
+export const CARDS: Card[] = [
 new Card("Matsu", "Normal", 1, 1, "./src/assets/images/Matsu-Normal.jpeg"),
 new Card("Matsu", "Normal", 1, 2, "./src/assets/images/Matsu-Normal-2.jpeg"),
 new Card("Matsu", "Ribbon", 5, 3, "./src/assets/images/Matsu-RedPoemTanzaku.jpeg"),
