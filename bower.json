@@ -1,0 +1,20 @@
+{
+  "name": "hanafuda",
+  "description": "Group Week Project Angular2",
+  "main": "main.ts",
+  "authors": [
+    "Anabel Ramirez",
+    "Ethan Luts",
+    "Jenna Cooper",
+    "Dylan Dills"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AnabelGR/Hanafuda",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
