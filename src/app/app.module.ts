@@ -12,8 +12,7 @@ import { HistoryComponent } from './history/history.component';
 import { PlayFieldComponent } from './play-field/play-field.component';
 import { Player1Component } from './player1/player1.component';
 import { Player2Component } from './player2/player2.component';
-import { Hand1Component } from './hand1/hand1.component';
-import { Hand2Component } from './hand2/hand2.component';
+import { HandComponent } from './hand/hand.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +25,8 @@ import { Hand2Component } from './hand2/hand2.component';
     PlayFieldComponent,
     Player1Component,
     Player2Component,
-    Hand1Component,
-    Hand2Component
-  ],
+    HandComponent
+    ],
   imports: [
     BrowserModule,
     FormsModule,
