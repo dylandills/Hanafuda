@@ -3,7 +3,7 @@ import { Player } from './player.model';
 
 @Injectable()
 export class PlayerService {
-
+  player: any;
   constructor() { }
 
   addPlayer(newPlayer: Player) {

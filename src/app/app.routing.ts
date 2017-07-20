@@ -11,7 +11,6 @@ import {Player1Component } from './player1/player1.component';
 import {Player2Component } from './player2/player2.component';
 
 
-
 const appRoutes: Routes = [
   {
     path: '',
