@@ -9,12 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var CollectedSuitsComponent = (function () {
     function CollectedSuitsComponent() {
-        this.hand = [
-            { cards[] }
-        ];
-        this.suits = [
-            { cards[] }
-        ];
+        this.hand = [];
+        this.suits = [];
     }
     CollectedSuitsComponent.prototype.onHandDrop = function (e) {
         this.hand.push(e.dragData);

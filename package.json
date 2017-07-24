@@ -20,12 +20,14 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@reactivex/rxjs": "^5.4.2",
     "angular2-swing": "^0.14.0",
     "card-deck": "^1.0.0",
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "ng2-drag-drop": "^2.5.0",
-    "rxjs": "^5.1.0",
+    "rxjs": "^5.4.2",
+    "rxjs-es": "^5.0.0-beta.12",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

@@ -4,6 +4,11 @@ import { Card } from '../card.model';
 import { CardService } from '../card.service';
 import {DropEvent} from 'ng2-drag-drop';
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+
+
 @Component({
   selector: 'app-collected-suits',
   templateUrl: './collected-suits.component.html',
@@ -11,8 +16,8 @@ import {DropEvent} from 'ng2-drag-drop';
 })
 export class CollectedSuitsComponent implements OnInit {
   cards: Card[];
-  hand: Card[];
-  suits: Card[];
+  hand: any[] = [];
+  suits: any[] = [];
 
       onHandDrop(e: DropEvent) {
         this.hand.push(e.dragData);
@@ -22,11 +27,11 @@ export class CollectedSuitsComponent implements OnInit {
         this.suits.push(e.dragData);
         this.removeCard(e.dragData, this.hand)
       }
-      removeCard(item: any, list: Array<any>) {
-        let index = Card.map(function (e) {
+      removeCard(card: any, hand: Array<any>) {
+        let index = card.map(function (e) {
           return e.image
-        }).indexOf(Card.image);
-        Card.splice(index, 1);
+        }).indexOf(card.image);
+        card.splice(index, 1);
       }
       // onCardDrop(e: any) {
       //     this.droppedCards.push(e.dragData);
