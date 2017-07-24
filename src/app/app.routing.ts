@@ -7,9 +7,8 @@ import { HistoryComponent } from './history/history.component';
 import { CardComponent } from './card/card.component';
 import { HandComponent } from './hand/hand.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
-import {Player1Component } from './player1/player1.component';
-import {Player2Component } from './player2/player2.component';
-
+import {PlayerComponent } from './player/player.component';
+import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
 
 const appRoutes: Routes = [
   {
@@ -41,13 +40,13 @@ const appRoutes: Routes = [
     component: PlayfieldComponent
   },
   {
-    path: 'player1',
-    component: Player1Component
+    path: 'player',
+    component: PlayerComponent
   },
   {
-    path: 'player2',
-    component: Player2Component
-  },
+    path: 'collected-suits',
+    component: CollectedSuitsComponent
+  }
  ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
