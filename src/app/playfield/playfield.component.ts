@@ -3,7 +3,6 @@ import { Card } from '../card.model';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
-import { Card } from '../card.model';
 
 
 @Component({
