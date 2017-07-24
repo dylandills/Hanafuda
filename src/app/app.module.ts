@@ -15,7 +15,6 @@ import { AboutComponent } from './about/about.component';
 import { HistoryComponent } from './history/history.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
 import { PlayerComponent } from './player/player.component';
-import { HandComponent } from './hand/hand.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { CollectedSuitsComponent } from './collected-suits/collected-suits.compo
     AboutComponent,
     HistoryComponent,
     PlayerComponent,
-    HandComponent,
     CollectedSuitsComponent
     ],
   imports: [

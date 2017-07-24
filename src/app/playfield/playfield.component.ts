@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../card.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
+import { Card } from '../card.model';
 
 
 @Component({
@@ -17,6 +17,21 @@ export class PlayfieldComponent implements OnInit {
   ngOnInit() {
     this.cards = this.cardService.getCards();
     console.log(this.cards); //Should return an array of Cards.
+  }
+
+  onHandDrop(e: DropEvent) {
+    this.hand.push(e.dragData);
+    this.removeCard(e.dragData, this.playfield)
+  }
+  onPlayfieldDrop(e: DropEvent) {
+    this.playfield.push(e.dragData);
+    this.removeCard(e.dragData, this.hand)
+  }
+  removeCard(item: any, list: Array<any>) {
+    let index = card.map(function (e) {
+      return e.image
+    }).indexOf(card.image);
+    card.splice(index, 1);
   }
 
   goToDetailPage(clickedCard: Card) {
