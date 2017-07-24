@@ -1,0 +1,14 @@
+<div class="row">
+    <ul class="list-group">
+        <li draggable *ngFor="let card of cards" [dragData]="card" class="list-group-card">{{card.image}}</li>
+    </ul>
+</div>
+
+<div class="col-sm-3">
+<div class="panel panel-default" droppable (onDrop)="onItemDrop($event)">
+    <div class="panel-heading">Add Suits Here</div>
+        <div class="panel-body">
+            <li *ngFor="let card of droppedCards" class="list-group-card">{{card.image}}</li>
+        </div>
+    </div>
+</div>
