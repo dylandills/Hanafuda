@@ -28,7 +28,7 @@ export class PlayfieldComponent implements OnInit {
 
   ngOnInit() {
     this.cards = this.cardService.getCards();
-    console.log(this.cards); //Should return an array of Cards.
+    console.log(this.cards);
 
     while(this.deck.length > 0) {
       let i = this.deck.length;
@@ -49,7 +49,7 @@ export class PlayfieldComponent implements OnInit {
     console.log(this.shuffleDeck);
   }
 
-  goToDetailPage(clickedCard: Card) {
+  goToCardDetail(clickedCard: Card) {
     this.router.navigate(['cards', clickedCard.id]);
   }
 
