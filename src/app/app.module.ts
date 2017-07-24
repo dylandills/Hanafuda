@@ -16,6 +16,7 @@ import { HistoryComponent } from './history/history.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
 import { PlayerComponent } from './player/player.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
+import { PlayerTurnPipe } from './playerTurn.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CollectedSuitsComponent } from './collected-suits/collected-suits.compo
     AboutComponent,
     HistoryComponent,
     PlayerComponent,
-    CollectedSuitsComponent
+    CollectedSuitsComponent,
+    PlayerTurnPipe
     ],
   imports: [
     BrowserModule,
