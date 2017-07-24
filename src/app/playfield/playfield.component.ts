@@ -21,5 +21,5 @@ export class PlayfieldComponent implements OnInit {
 
   goToDetailPage(clickedCard: Card) {
     this.router.navigate(['cards', clickedCard.id]);
-  };
+  }
 }
