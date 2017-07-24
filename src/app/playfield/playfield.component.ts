@@ -17,6 +17,8 @@ export class PlayfieldComponent implements OnInit {
   players: Player[];
   shuffleDeck: any[] = [];
   deck: any[] = [];
+  playfield: any[] = [];
+  hand: any[] = [];
 
   constructor(private router: Router, private cardService: CardService) { }
 
@@ -43,7 +45,7 @@ export class PlayfieldComponent implements OnInit {
     console.log(this.shuffleDeck);
   }
 
-  goToDetailPage(clickedCard: Card) {
+  goToCardDetail(clickedCard: Card) {
     this.router.navigate(['cards', clickedCard.id]);
   }
 
@@ -55,7 +57,7 @@ export class PlayfieldComponent implements OnInit {
     this.playfield.push(e.dragData);
     this.removeCard(e.dragData, this.hand)
   }
-  removeCard(item: any, list: Array<any>) {
+  removeCard(card: any, playfield: Array<any>) {
     let index = card.map(function (e) {
       return e.image
     }).indexOf(card.image);

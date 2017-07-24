@@ -2,7 +2,7 @@
 
 #### An Epicodus team week project proposal utilizing Angular2, 07.10.17
 
-#### **By Anabel Ramirez, Ethan, Jenna, Dylan**
+#### **By Anabel Ramirez, Ethan Luts, Jenna, Dylan**
 
 ## Description
 
