@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { HistoryComponent } from './history/history.component';
 import { CardComponent } from './card/card.component';
-import { HandComponent } from './hand/hand.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
 import {PlayerComponent } from './player/player.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
@@ -30,10 +29,6 @@ const appRoutes: Routes = [
   {
     path: 'card',
     component: CardComponent
-  },
-  {
-    path: 'hand',
-    component: HandComponent
   },
   {
     path: 'playfield',
