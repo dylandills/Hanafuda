@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {ViewEncapsulation} from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
-
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
@@ -36,7 +36,8 @@ import { PlayerTurnPipe } from './playerTurn.pipe';
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2DragDropModule.forRoot()
+    Ng2DragDropModule.forRoot(),
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
