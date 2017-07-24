@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card.model';
+import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
 
@@ -11,12 +12,37 @@ import { CardService } from '../card.service';
   providers: [CardService]
 })
 export class PlayfieldComponent implements OnInit {
+
   cards: Card[];
+  players: Player[];
+  shuffleDeck: any[] = [];
+  deck: any[] = [];
+
   constructor(private router: Router, private cardService: CardService) { }
 
   ngOnInit() {
     this.cards = this.cardService.getCards();
     console.log(this.cards); //Should return an array of Cards.
+
+    while(this.deck.length > 0) {
+      let i = this.deck.length;
+      var rand = Math.floor(Math.random() *i);
+      var topCard = this.deck[rand];
+      this.shuffleDeck.push(topCard);
+      this.deck.splice(this.deck.indexOf(topCard), 1);
+    }
+
+
+  }
+  
+  dealCards() {
+    for(let player of this.players) {
+      for(let i = 0; i < 9; i++) {
+        player.hand.push(this.shuffleDeck[0]);
+        this.shuffleDeck.splice(0,1);
+      }
+    }
+    console.log(this.shuffleDeck);
   }
 
   goToDetailPage(clickedCard: Card) {
