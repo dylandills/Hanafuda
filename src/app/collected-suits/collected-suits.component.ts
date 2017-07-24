@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { Card } from '../card.model';
 import { CardService } from '../card.service';
+import {DropEvent} from 'ng2-drag-drop';
 
 @Component({
   selector: 'app-collected-suits',
@@ -10,6 +11,9 @@ import { CardService } from '../card.service';
 })
 export class CollectedSuitsComponent implements OnInit {
   cards: Card[];
+  hand: Card[];
+  suits: Card[];
+
       onHandDrop(e: DropEvent) {
         this.hand.push(e.dragData);
         this.removeCard(e.dragData, this.suits)
@@ -19,10 +23,10 @@ export class CollectedSuitsComponent implements OnInit {
         this.removeCard(e.dragData, this.hand)
       }
       removeCard(item: any, list: Array<any>) {
-        let index = card.map(function (e) {
+        let index = Card.map(function (e) {
           return e.image
-        }).indexOf(card.image);
-        card.splice(index, 1);
+        }).indexOf(Card.image);
+        Card.splice(index, 1);
       }
       // onCardDrop(e: any) {
       //     this.droppedCards.push(e.dragData);

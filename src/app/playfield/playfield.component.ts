@@ -3,15 +3,14 @@ import { Card } from '../card.model';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
-import { Card } from '../card.model';
-
 
 @Component({
   selector: 'app-playfield',
   templateUrl: './playfield.component.html',
-  styleUrls: ['./playfield.component.sass'],
+  styleUrls: ['./playfield.component.scss', ],
   providers: [CardService]
 })
+
 export class PlayfieldComponent implements OnInit {
 
   cards: Card[];
@@ -32,8 +31,6 @@ export class PlayfieldComponent implements OnInit {
       this.shuffleDeck.push(topCard);
       this.deck.splice(this.deck.indexOf(topCard), 1);
     }
-
-
   }
 
   dealCards() {
@@ -44,6 +41,10 @@ export class PlayfieldComponent implements OnInit {
       }
     }
     console.log(this.shuffleDeck);
+  }
+
+  goToDetailPage(clickedCard: Card) {
+    this.router.navigate(['cards', clickedCard.id]);
   }
 
   onHandDrop(e: DropEvent) {
@@ -59,9 +60,5 @@ export class PlayfieldComponent implements OnInit {
       return e.image
     }).indexOf(card.image);
     card.splice(index, 1);
-  }
-
-  goToDetailPage(clickedCard: Card) {
-    this.router.navigate(['cards', clickedCard.id]);
   }
 }
