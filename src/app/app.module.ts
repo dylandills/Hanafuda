@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {ViewEncapsulation} from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
+import { routing } from './app.routing';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +15,7 @@ import { HowToPlayComponent } from './how-to-play/how-to-play.component';
 import { AboutComponent } from './about/about.component';
 import { HistoryComponent } from './history/history.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
-import { PlayerComponent } from './player1/player.component';
+import { PlayerComponent } from './player/player.component';
 import { HandComponent } from './hand/hand.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
 
@@ -36,7 +37,8 @@ import { CollectedSuitsComponent } from './collected-suits/collected-suits.compo
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2DragDropModule.forRoot()
+    Ng2DragDropModule.forRoot(),
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

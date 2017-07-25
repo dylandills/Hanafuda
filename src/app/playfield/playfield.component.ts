@@ -7,7 +7,7 @@ import { CardService } from '../card.service';
 @Component({
   selector: 'app-playfield',
   templateUrl: './playfield.component.html',
-  styleUrls: ['./playfield.component.sass'],
+  styleUrls: ['./playfield.component.scss'],
   providers: [CardService]
 })
 export class PlayfieldComponent implements OnInit {
