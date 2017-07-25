@@ -50,8 +50,6 @@
     "sass-loader": "^6.0.3",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0",
-    "webpack-bower-sass-sources": "^1.0.0",
-    "webpack-sass": "^2.2.1"
+    "typescript": "~2.2.0"
   }
 }
