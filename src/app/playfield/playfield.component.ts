@@ -7,7 +7,7 @@ import { CardService } from '../card.service';
 @Component({
   selector: 'app-playfield',
   templateUrl: './playfield.component.html',
-  styleUrls: ['./playfield.component.scss', ],
+  styleUrls: ['./playfield.component.scss'],
   providers: [CardService]
 })
 
