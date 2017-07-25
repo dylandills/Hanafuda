@@ -9,7 +9,7 @@ import {DropEvent} from 'ng2-drag-drop';
   selector: 'app-playfield',
   templateUrl: './playfield.component.html',
   styleUrls: ['./playfield.component.scss'],
-  providers: [CardService]
+  providers: [ CardService ]
 })
 
 export class PlayfieldComponent implements OnInit {

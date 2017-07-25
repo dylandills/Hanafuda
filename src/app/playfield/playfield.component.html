@@ -1,24 +1,14 @@
 <h2>PlayField</h2>
 
-<!-- <div class="deck-area">
-  <div class="deck-cards"></div>
-</div>
-<div *ngFor="let card of cards" (click)="goToDetailPage(card)">
-  <div>{{card.image}}<div>
-</div> -->
+
 <div class="play-area">
   <div id="card_samples">
-    <div class="playerOne">
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
+    <div class="playerOne" *ngFor="let card of cards">
+      <img width="100px" src="{{card.img}}"/>
     </div>
-    <div class="play-field">
+
+
+    <!-- <div class="play-field">
       <div class="card-field"></div>
       <div class="card-field"></div>
       <div class="card-field"></div>
@@ -27,14 +17,14 @@
       <div class="card-field"></div>
     </div>
     <div class="playerTwo">
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-      <img src="{{(Card | async)?.image}}" alt=""/>
-    </div>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+      <img src="{{(card | async)?.img}}" alt=""/>
+    </div> -->
   </div>
 </div>
