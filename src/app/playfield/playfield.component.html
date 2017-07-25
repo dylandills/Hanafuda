@@ -15,8 +15,9 @@
       <div class="card-field"></div>
       <div class="card-field"></div>
       <div class="card-field"></div>
-    </div>
-    <div class="playerTwo">
+    </div> -->
+    <br><br><br><br>
+    <!-- <div class="playerTwo" *ngFor="let card of cards">
       <img src="{{(card | async)?.img}}" alt=""/>
       <img src="{{(card | async)?.img}}" alt=""/>
       <img src="{{(card | async)?.img}}" alt=""/>
@@ -26,5 +27,9 @@
       <img src="{{(card | async)?.img}}" alt=""/>
       <img src="{{(card | async)?.img}}" alt=""/>
     </div> -->
+
+    <div class="playerTwo" *ngFor="let card of cards">
+      <img width="100px"[src]="card.img">
+    </div>
   </div>
 </div>
