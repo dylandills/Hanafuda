@@ -15,7 +15,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(name: string, birthMonth: string, score: string) {
+  submitForm(name: string, birthMonth: string, score: number) {
     const newPlayer: Player = new Player(name, birthMonth, score);
     this.playerService.addPlayer(newPlayer);
   }

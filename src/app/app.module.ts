@@ -6,7 +6,6 @@ import {ViewEncapsulation} from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { routing } from './app.routing';
 
-
 import { AppComponent } from './app.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardComponent } from './card/card.component';
@@ -16,8 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { HistoryComponent } from './history/history.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
 import { PlayerComponent } from './player/player.component';
-import { HandComponent } from './hand/hand.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
+import { PlayerTurnPipe } from './playerTurn.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { CollectedSuitsComponent } from './collected-suits/collected-suits.compo
     AboutComponent,
     HistoryComponent,
     PlayerComponent,
-    HandComponent,
     CollectedSuitsComponent
     ],
   imports: [
