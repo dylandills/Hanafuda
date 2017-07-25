@@ -3,11 +3,12 @@ import { Card } from '../card.model';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
+import {DropEvent} from 'ng2-drag-drop';
 
 @Component({
   selector: 'app-playfield',
   templateUrl: './playfield.component.html',
-  styleUrls: ['./playfield.component.scss', ],
+  styleUrls: ['./playfield.component.scss'],
   providers: [CardService]
 })
 

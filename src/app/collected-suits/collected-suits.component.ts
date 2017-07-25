@@ -22,11 +22,11 @@ export class CollectedSuitsComponent implements OnInit {
         this.suits.push(e.dragData);
         this.removeCard(e.dragData, this.hand)
       }
-      removeCard(item: any, list: Array<any>) {
-        let index = Card.map(function (e) {
+      removeCard(card: any, suit: Array<any>) {
+        let index = card.map(function (e) {
           return e.image
-        }).indexOf(Card.image);
-        Card.splice(index, 1);
+        }).indexOf(card.image);
+        card.splice(index, 1);
       }
       // onCardDrop(e: any) {
       //     this.droppedCards.push(e.dragData);
@@ -35,5 +35,4 @@ export class CollectedSuitsComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
