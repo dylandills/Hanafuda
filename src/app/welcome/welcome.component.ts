@@ -5,7 +5,7 @@ import { Player } from '../player.model';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.sass'],
+  styleUrls: ['./welcome.component.scss'],
   providers: [PlayerService]
 })
 export class WelcomeComponent implements OnInit {
