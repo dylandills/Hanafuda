@@ -48,9 +48,9 @@ export class PlayfieldComponent implements OnInit {
     this.router.navigate(['cards', clickedCard.$key]);
   }
 
-  dealCards(){
-    this.shuffleDeck = this.cardService.dealCards(this.localPlayers);
-  }
+  // dealCards(){
+  //   this.shuffleDeck = this.cardService.dealCards(this.localPlayers);
+  // }
 
   onHandDrop(e: DropEvent) {
     this.hand.push(e.dragData);

@@ -1,0 +1,23 @@
+h2 {
+  text-shadow: $text-shadow;
+}
+.about-us {
+  margin-top: 40px;
+  padding: 3em;
+  font-size: $main-font-size;
+  @include content-body;
+}
+.team-member {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 1.5em;
+  h3, p {
+    margin-left: 1em;
+  }
+  img {
+    width: 400px;
+    height: 200px;
+    border: 2px dotted red;
+  }
+}
