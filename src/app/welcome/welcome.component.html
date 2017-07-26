@@ -1,17 +1,25 @@
-<h2>Player One</h2>
-<label>Player One Name:</label>
-<input #newName>
-<label>Player One Birthday:</label>
-<input #newBirthMonth type="date">
-<input type="number" #newScore value="0">
+<div class="welcome-container">
+  <div class="player-birth">
+    <h2>Player One</h2>
+    <label>Player One Name:</label>
+    <input #newName>
+    <label>Player One Birthday:</label>
+    <input #newBirthMonth type="date">
+    <div class="submit-button"><a href="">
+      <button class=" clickable-button" (click)="submitForm1(newName.value, newBirthMonth.value, newScore.value); newName.value=''; newBirthMonth.value=''">Submit</button></a>
+    </div>
 
-<button (click)="submitForm1(newName.value, newBirthMonth.value, newScore.value); newName.value=''; newBirthMonth.value=''">Submit</button>
-
-<h2>Player Two</h2>
-<label>Player Two Name:</label>
-<input #newName2>
-<label>Player Two Birthday:</label>
-<input #newBirthMonth2 type="date">
-<button (click)="submitForm2(newName2.value, newBirthMonth2.value); newName2.value=''; newBirthMonth2.value=''">Submit</button>
-
-<button routerLink="playfield">ENTER</button>
+    <h2>Player Two</h2>
+    <label>Player Two Name:</label>
+    <input #newName2>
+    <label>Player Two Birthday:</label>
+    <input #newBirthMonth2 type="date">
+    <div class="submit-button"><a href="">
+      <button class=" clickable-button" (click)="submitForm2(newName2.value, newBirthMonth2.value); newName2.value=''; newBirthMonth2.value=''">Submit</button></a>
+    </div>
+    <br>
+    <div class="enter-button">
+      <a href=""><button class="clickable-button" routerLink="playfield">ENTER</button></a>
+    </div>
+  </div>
+</div>
