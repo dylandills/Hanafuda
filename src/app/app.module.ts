@@ -40,7 +40,8 @@ export const firebaseConfig = {
     AboutComponent,
     HistoryComponent,
     PlayerComponent,
-    CollectedSuitsComponent
+    CollectedSuitsComponent,
+    PlayerTurnPipe
     ],
   imports: [
     BrowserModule,

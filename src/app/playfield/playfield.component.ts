@@ -3,22 +3,22 @@ import { Card } from '../card.model';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
+import { PlayerService } from '../player.service';
 import { DropEvent} from 'ng2-drag-drop';
 import { FirebaseListObservable } from 'angularfire2/database';
-
 
 @Component({
   selector: 'app-playfield',
   templateUrl: './playfield.component.html',
   styleUrls: ['./playfield.component.scss'],
-  providers: [ CardService ]
+  providers: [ CardService, PlayerService ]
 })
 
 export class PlayfieldComponent implements OnInit {
   cards: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
-  players: Player[];
+  players: any[] = [];
   shuffleDeck: any[] = [];
   deck: any[] = [];
   playfield: any[] = [];
@@ -35,8 +35,8 @@ export class PlayfieldComponent implements OnInit {
     var topCard = this.deck[rand];
     this.shuffleDeck.push(topCard);
     this.deck.splice(this.deck.indexOf(topCard), 1);
+    }
   }
-}
 
 goToCardDetail(clickedCard) {
   this.router.navigate(['cards', clickedCard.$key]);
