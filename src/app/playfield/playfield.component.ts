@@ -4,6 +4,8 @@ import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
 import {DropEvent} from 'ng2-drag-drop';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-playfield',
@@ -13,8 +15,8 @@ import {DropEvent} from 'ng2-drag-drop';
 })
 
 export class PlayfieldComponent implements OnInit {
+  cards: FirebaseListObservable<any[]>;
 
-  cards: Card[];
   players: Player[];
   shuffleDeck: any[] = [];
   deck: any[] = [];

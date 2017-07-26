@@ -5,6 +5,10 @@ import { HttpModule } from '@angular/http';
 import {ViewEncapsulation} from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { routing } from './app.routing';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 
 import { AppComponent } from './app.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
@@ -17,6 +21,13 @@ import { PlayfieldComponent } from './playfield/playfield.component';
 import { PlayerComponent } from './player/player.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
 import { PlayerTurnPipe } from './playerTurn.pipe';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -36,7 +47,10 @@ import { PlayerTurnPipe } from './playerTurn.pipe';
     FormsModule,
     HttpModule,
     Ng2DragDropModule.forRoot(),
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+  AngularFireDatabaseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

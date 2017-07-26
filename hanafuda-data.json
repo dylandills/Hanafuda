@@ -2,241 +2,289 @@
     "flower": "Matsu",
     "kind": "Normal",
     "points": "1",
-    "id": "1"
+    "id": "1",
+    "image": "src/assets/images/Matsu-Normal.jpg"
   },{
     "flower": "Matsu",
     "kind": "Normal",
     "points": "1",
-    "id": "2"
+    "id": "2",
+    "image": "src/assets/images/Matsu-Normal-2.jpg"
   },{
     "flower": "Matsu",
     "kind": "Poetry Ribbon",
     "points": "5",
-    "id": "3"
+    "id": "3",
+    "image": "src/assets/images/Matsu-RedPoemTanzaku.jpg"
   },{
     "flower": "Matsu",
     "kind": "Crane and Sun",
     "points": "20",
-    "id": "4"
+    "id": "4",
+    "image": "src/assets/images/Matsu-Crane.jpg"
   },{
     "flower": "Ume",
     "kind": "Normal",
     "points": "1",
-    "id": "5"
+    "id": "5",
+    "image": "src/assets/images/Ume-Normal.jpg"
   },{
     "flower": "Ume",
     "kind": "Normal",
     "points": "1",
-    "id": "6"
+    "id": "6",
+    "image": "src/assets/images/Ume-Normal-2.jpg"
   },{
     "flower": "Ume",
     "kind": "Poetry Ribbon",
     "points": "5",
-    "id": "7"
+    "id": "7",
+    "image": "src/assets/images/Ume-RedPoemTanzaku.jpg"
   },{
     "flower": "Ume",
     "kind": "Bush-warbler in a Tree",
     "points": "10",
-    "id": "8"
+    "id": "8",
+    "image": "src/assets/images/Ume-Nightingale.jpg"
   },{
     "flower": "Sakura",
     "kind": "Normal",
     "points": "1",
-    "id": "9"
+    "id": "9",
+    "image": "src/assets/images/Sakura-Normal.jpg"
   },{
     "flower": "Sakura",
     "kind": "Normal",
     "points": "1",
-    "id": "10"
+    "id": "10",
+    "image": "src/assets/images/Sakura-Normal-2.jpg"
   },{
     "flower": "Sakura",
     "kind": "Poetry Ribbon",
     "points": "5",
-    "id": "11"
+    "id": "11",
+    "image": "src/assets/images/Sakura-RedPoemTanzaku.jpg"
   },{
     "flower": "Sakura",
     "kind": "Camp Curtain",
     "points": "20",
-    "id": "12"
+    "id": "12",
+    "image": "src/assets/images/Sakura-Curtain.jpg"
   },{
     "flower": "Fuji",
     "kind": "Normal",
     "points": "1",
-    "id": "13"
+    "id": "13",
+    "image": "src/assets/images/Fuji-Normal.jpg"
   },{
     "flower": "Fuji",
     "kind": "Normal",
     "points": "1",
-    "id": "14"
+    "id": "14",
+    "image": "src/assets/images/Fuji-Normal-2.jpg"
   },{
     "flower": "Fuji",
     "kind": "Red Ribbon",
     "points": "5",
-    "id": "15"
+    "id": "15",
+    "image": "src/assets/images/Fuji-RedTazaku.jpg"
   },{
     "flower": "Fuji",
     "kind": "Cuckoo",
     "points": "10",
-    "id": "16"
+    "id": "16",
+    "image": "src/assets/images/Fuji-Cuckoo.jpg"
   },{
     "flower": "Ayama",
     "kind": "Normal",
     "points": "1",
-    "id": "17"
+    "id": "17",
+    "image": "src/assets/images/Ayama-Normal.jpg"
   },{
     "flower": "Ayama",
     "kind": "Normal",
     "points": "1",
-    "id": "18"
+    "id": "18",
+    "image": "src/assets/images/Ayama-Normal-2.jpg"
   },{
     "flower": "Ayama",
     "kind": "Red Ribbon",
     "points": "5",
-    "id": "19"
+    "id": "19",
+    "image": "src/assets/images/Ayama-RedTanzaku.jpg"
   },{
     "flower": "Ayama",
     "kind": "Water Iris and Eight-plank Bridge",
     "points": "10",
-    "id": "20"
+    "id": "20",
+    "image": "src/assets/images/Ayama-Bridge.jpg"
   },{
     "flower": "Botan",
     "kind": "Normal",
     "points": "1",
-    "id": "21"
+    "id": "21",
+    "image": "src/assets/images/Botan-Normal.jpg"
   },{
     "flower": "Botan",
     "kind": "Normal",
     "points": "1",
-    "id": "22"
+    "id": "22",
+    "image": "src/assets/images/Botan-Normal-2.jpg"
   },{
     "flower": "Botan",
     "kind": "Purple Ribbon",
     "points": "5",
-    "id": "23"
+    "id": "23",
+    "image": "src/assets/images/Botan-BlueTanzaku.jpg"
   },{
     "flower": "Botan",
     "kind": "Butterflies",
     "points": "10",
-    "id": "24"
+    "id": "24",
+    "image": "src/assets/images/Botan-Butterflies.jpg"
   },{
     "flower": "Hagi",
     "kind": "Normal",
     "points": "1",
-    "id": "25"
+    "id": "25",
+    "image": "src/assets/images/Hagi-Normal.jpg"
   },{
     "flower": "Hagi",
     "kind": "Normal",
     "points": "1",
-    "id": "26"
+    "id": "26",
+    "image": "src/assets/images/Hagi-Normal-2.jpg"
   },{
     "flower": "Hagi",
     "kind": "Red Ribbon",
     "points": "5",
-    "id": "27"
+    "id": "27",
+    "image": "src/assets/images/Hagi-RedTanzaku.jpg"
   },{
     "flower": "Hagi",
     "kind": "Boar",
     "points": "10",
-    "id": "28"
+    "id": "28",
+    "image": "src/assets/images/Hagi-Boar.jpg"
   },{
     "flower": "Susuki",
     "kind": "Normal",
     "points": "1",
-    "id": "29"
+    "id": "29",
+    "image": "src/assets/images/Suzuki-Normal.jpg"
   },{
     "flower": "Susuki",
     "kind": "Normal",
     "points": "1",
-    "id": "30"
+    "id": "30",
+    "image": "src/assets/images/Suzuki-Normal-2.jpg"
   },{
     "flower": "Susuki",
     "kind": "Geese in Flight",
     "points": "10",
-    "id": "31"
+    "id": "31",
+    "image": "src/assets/images/Suzuki-Geese.jpg"
   },{
     "flower": "Susuki",
     "kind": "Full Moon with Red Sky",
     "points": "20",
-    "id": "32"
+    "id": "32",
+    "image": "src/assets/images/Suzuki-Moon.jpg"
   },{
     "flower": "Kiku",
     "kind": "Normal",
     "points": "1",
-    "id": "33"
+    "id": "33",
+    "image": "src/assets/images/Kiku-Normal.jpg"
   },{
     "flower": "Kiku",
     "kind": "Normal",
     "points": "1",
-    "id": "34"
+    "id": "34",
+    "image": "src/assets/images/Kiku-Normal-2.jpg"
   },{
     "flower": "Kiku",
     "kind": "Purple Ribbon",
     "points": "5",
-    "id": "35"
+    "id": "35",
+    "image": "src/assets/images/Kiku-BlueTanzaku.jpg"
   },{
     "flower": "Kiku",
     "kind": "Poetry Sake Cup",
     "points": "10",
-    "id": "36"
+    "id": "36",
+    "image": "src/assets/images/Kiku-SakeCup.jpg"
   },{
     "flower": "Momiji",
     "kind": "Normal",
     "points": "1",
-    "id": "37"
+    "id": "37",
+    "image": "src/assets/images/Momiji-Normal.jpg"
   },{
     "flower": "Momiji",
     "kind": "Normal",
     "points": "1",
-    "id": "38"
+    "id": "38",
+    "image": "src/assets/images/Momiji-Normal-2.jpg"
   },{
     "flower": "Momiji",
     "kind": "Purple Ribbon",
     "points": "5",
-    "id": "39"
+    "id": "39",
+    "image": "src/assets/images/Momiji-BlueTanzaku.jpg"
   },{
     "flower": "Momiji",
     "kind": "Deer and Maple",
     "points": "10",
-    "id": "40"
+    "id": "40",
+    "image": "src/assets/images/Momiji-Deer.jpg"
   },{
     "flower": "Yanagi",
-    "kind": "Normal",
-    "points": "1",
-    "id": "41"
+    "kind": "Rain",
+    "points": "20",
+    "id": "41",
+    "image": "src/assets/images/Yanagi-Rain.jpg"
   },{
     "flower": "Yanagi",
-    "kind": "Normal",
+    "kind": "Lightning",
     "points": "1",
-    "id": "42"
+    "id": "42",
+    "image": "src/assets/images/Yanagi-Lightning.jpg"
   },{
     "flower": "Yanagi",
     "kind": "Purple Ribbon",
     "points": "5",
-    "id": "43"
+    "id": "43",
+    "image": "src/assets/images/Yanagi-RedTanzaku.jpg"
   },{
     "flower": "Yanagi",
-    "kind": "Deer and Maple",
+    "kind": "Swallow",
     "points": "10",
-    "id": "44"
+    "id": "44",
+    "image": "src/assets/images/Yanagi-Swallow.jpg"
   },{
     "flower": "Kiri",
     "kind": "Normal",
     "points": "1",
-    "id": "45"
+    "id": "45",
+    "image": "src/assets/images/Kiri-Normal.jpg"
   },{
     "flower": "Kiri",
     "kind": "Normal",
     "points": "1",
-    "id": "46"
+    "id": "46",
+    "image": "src/assets/images/Kiri-Normal-2.jpg"
   },{
     "flower": "Kiri",
     "kind": "Normal",
     "points": "1",
-    "id": "47"
+    "id": "47",
+    "image": "src/assets/images/Kiri-Normal-3.jpg"
   },{
     "flower": "Kiri",
     "kind": "Chinese Phoenix",
     "points": "20",
-    "id": "48"
+    "id": "48",
+    "image": "src/assets/images/Kiri-Phoenix.jpg"
   }]
 }
