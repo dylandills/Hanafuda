@@ -1,17 +1,13 @@
 <h2>Player One</h2>
 <label>Player One Name:</label>
 <input #newName>
-<label>Player One Birthday:</label>
-<input #newBirthMonth type="date">
-<input type="number" #newScore value="0">
 
-<button (click)="submitForm1(newName.value, newBirthMonth.value, newScore.value); newName.value=''; newBirthMonth.value=''">Submit</button>
+<button (click)="submitForm(newName.value);  newName.value=''">Submit</button>
 
 <h2>Player Two</h2>
 <label>Player Two Name:</label>
 <input #newName2>
-<label>Player Two Birthday:</label>
-<input #newBirthMonth2 type="date">
-<button (click)="submitForm2(newName2.value, newBirthMonth2.value); newName2.value=''; newBirthMonth2.value=''">Submit</button>
 
-<button routerLink="playfield">ENTER</button>
+<button (click)="submitForm2(newName2.value); newName2.value=''">Submit</button>
+
+<button routerLink="playfield" >ENTER</button>

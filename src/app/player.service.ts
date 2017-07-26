@@ -25,9 +25,7 @@ export class PlayerService {
 
   updatePlayer(localUpdatedPlayer){
   const playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
-  playerEntryInFirebase.update({name: localUpdatedPlayer.name,
-                              birthMonth: localUpdatedPlayer.birthMonth,
-                              score: localUpdatedPlayer.score});
+  playerEntryInFirebase.update({name: localUpdatedPlayer.name, score: localUpdatedPlayer.score});
   }
 
   deletePlayer(localPlayerToDelete){

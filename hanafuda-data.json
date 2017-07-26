@@ -288,5 +288,9 @@
     "image": "src/assets/images/Kiri-Phoenix.jpg"
   }],
   "players": [{
+    "turn": "",
+    "hand": "",
+    "name": "",
+    "score": ""
   }]
 }
