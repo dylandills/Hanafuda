@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { CardService } from '../card.service';
 import { PlayerService } from '../player.service';
 import { DropEvent} from 'ng2-drag-drop';
-import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-playfield',
@@ -15,9 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 
 export class PlayfieldComponent implements OnInit {
-  cards;
-  players;
-  currentRoute: string = this.router.url;
+  cards: Card[];
 
   localPlayers: Player[] = [];
   shuffleDeck: any[] = [];
@@ -29,6 +26,9 @@ export class PlayfieldComponent implements OnInit {
 
   ngOnInit() {
 
+    this.cards = this.cardService.getCards();
+
+    // Randomize deck of cards on init.
     while (this.deck.length > 0) {
     let i = this.deck.length;
     var rand = Math.floor(Math.random() *i);
@@ -36,20 +36,15 @@ export class PlayfieldComponent implements OnInit {
     this.shuffleDeck.push(topCard);
     this.deck.splice(this.deck.indexOf(topCard), 1);
     }
-    this.cards = this.cardService.getCards();
-    // this.cardService.getCards().subscribe(response => {
-    //   this.cards = response;
-      //Retrieve cards from firebase
-      // this.shuffleDeck = this.cardService.getCards(this.cards);
-    // }
   }
 
-  goToCardDetail(clickedCard) {
-    this.router.navigate(['cards', clickedCard.$key]);
+  goToCardDetail(clickedCard: Card) {
+    this.router.navigate(['cards', clickedCard.id]);
   }
 
   dealCards(){
     this.shuffleDeck = this.cardService.dealCards(this.localPlayers);
+    return this.shuffleDeck;
   }
 
   onHandDrop(e: DropEvent) {

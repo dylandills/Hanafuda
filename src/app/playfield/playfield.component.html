@@ -1,5 +1,6 @@
 
-    <div class="player1" *ngFor="let card of cards | async">
-      <!-- <img src={{card.image}} width="100px"> -->
+    <div class="player1" *ngFor="let card of cards">
+      <p>{{card.kind}}</p>
+      <img src={{card.image}} width="100px">
     </div>
     <button (click)="dealCards()">Player1</button>
