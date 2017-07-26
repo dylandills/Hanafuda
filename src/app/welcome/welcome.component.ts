@@ -24,6 +24,7 @@ export class WelcomeComponent implements OnInit {
     const newPlayer: Player = new Player(name, birthMonth, score);
     this.playerService.addPlayer(newPlayer);
   }
+
 }
 
 
