@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {ViewEncapsulation} from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
+import { routing } from './app.routing';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +20,14 @@ import { HistoryComponent } from './history/history.component';
 import { PlayfieldComponent } from './playfield/playfield.component';
 import { PlayerComponent } from './player/player.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
+import { PlayerTurnPipe } from './playerTurn.pipe';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -28,13 +40,18 @@ import { CollectedSuitsComponent } from './collected-suits/collected-suits.compo
     AboutComponent,
     HistoryComponent,
     PlayerComponent,
-    CollectedSuitsComponent
+    CollectedSuitsComponent,
+    PlayerTurnPipe
     ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2DragDropModule.forRoot()
+    Ng2DragDropModule.forRoot(),
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
