@@ -15,42 +15,42 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 
 export class PlayfieldComponent implements OnInit {
-  cards: FirebaseListObservable<any[]>;
+  cards;
+  players;
   currentRoute: string = this.router.url;
 
-  players: any[] = [];
+  localPlayers: Player[] = [];
   shuffleDeck: any[] = [];
   deck: any[] = [];
   playfield: any[] = [];
   hand: any[] = [];
 
-  constructor(private router: Router, private cardService: CardService) { }
+  constructor(private router: Router, private cardService: CardService, private playerService: PlayerService) { }
 
   ngOnInit() {
-    this.cards = this.cardService.getCards();
 
-  while(this.deck.length > 0) {
+    while (this.deck.length > 0) {
     let i = this.deck.length;
     var rand = Math.floor(Math.random() *i);
     var topCard = this.deck[rand];
     this.shuffleDeck.push(topCard);
     this.deck.splice(this.deck.indexOf(topCard), 1);
     }
+    this.cards = this.cardService.getCards();
+    // this.cardService.getCards().subscribe(response => {
+    //   this.cards = response;
+      //Retrieve cards from firebase
+      // this.shuffleDeck = this.cardService.getCards(this.cards);
+    // }
   }
 
-goToCardDetail(clickedCard) {
-  this.router.navigate(['cards', clickedCard.$key]);
-}
-
-dealCards() {
-  for(let player of this.players) {
-    for(let i = 0; i < 9; i++) {
-      player.hand.push(this.shuffleDeck[0]);
-      this.shuffleDeck.splice(0,1);
-    }
+  goToCardDetail(clickedCard) {
+    this.router.navigate(['cards', clickedCard.$key]);
   }
-  console.log(this.shuffleDeck);
-}
+
+  dealCards(){
+    this.shuffleDeck = this.cardService.dealCards(this.localPlayers);
+  }
 
   onHandDrop(e: DropEvent) {
     this.hand.push(e.dragData);

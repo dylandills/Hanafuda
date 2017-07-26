@@ -6,6 +6,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class PlayerService {
   players: FirebaseListObservable<any[]>;
+  localPlayers: Player[] = [];
 
   constructor(private database: AngularFireDatabase) {
     this.players = database.list('players');
@@ -13,6 +14,10 @@ export class PlayerService {
 
   getPlayers() {
     return this.players;
+  }
+
+  getLocalPlayers(){
+    return this.localPlayers;
   }
 
   addPlayer(newPlayer: Player) {
@@ -25,13 +30,12 @@ export class PlayerService {
 
   updatePlayer(localUpdatedPlayer){
   const playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
-  playerEntryInFirebase.update({name: localUpdatedPlayer.name,
-                              birthMonth: localUpdatedPlayer.birthMonth,
-                              score: localUpdatedPlayer.score});
+  playerEntryInFirebase.update({name: localUpdatedPlayer.name, score: localUpdatedPlayer.score});
   }
 
   deletePlayer(localPlayerToDelete){
     const playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
     playerEntryInFirebase.remove();
   }
+
 }

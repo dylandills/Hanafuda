@@ -16,16 +16,13 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm1(name: string, birthMonth: string, score: number) {
-    const newPlayer: Player = new Player(name, birthMonth, score);
-    this.playerService.addPlayer(newPlayer);
-  }
-  submitForm2(name: string, birthMonth: string, score: number) {
-    const newPlayer: Player = new Player(name, birthMonth, score);
+  submitForm(name: string, score: number) {
+    const newPlayer: Player = new Player(name, score=0);
     this.playerService.addPlayer(newPlayer);
   }
 
+  submitForm2(name: string, score: number) {
+    const newPlayer: Player = new Player(name, score=0);
+    this.playerService.addPlayer(newPlayer);
+  }
 }
-
-
-// add PlayerTurnPipe to get data from both players into the database on welcome html
