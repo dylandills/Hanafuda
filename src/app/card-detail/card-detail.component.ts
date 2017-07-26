@@ -3,6 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Card } from '../card.model';
 import { CardService } from '../card.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-card-detail',
@@ -11,8 +13,8 @@ import { CardService } from '../card.service';
   providers: [CardService]
 })
 export class CardDetailComponent implements OnInit {
-  cardId: number = null;
-  cardToDisplay: Card;
+  cardId: string;
+  cardToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +24,9 @@ export class CardDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.cardId = parseInt(urlParameters['id']);
+      this.cardId = urlParameters['id'];
     });
+    this.cardToDisplay = this.cardService.getCardById(this.cardId);
   }
 
 }

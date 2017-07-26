@@ -49,7 +49,7 @@ export const firebaseConfig = {
     Ng2DragDropModule.forRoot(),
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-  AngularFireDatabaseModule
+    AngularFireDatabaseModule
 
   ],
   providers: [],

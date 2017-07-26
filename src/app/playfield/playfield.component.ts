@@ -48,8 +48,8 @@ export class PlayfieldComponent implements OnInit {
     console.log(this.shuffleDeck);
   }
 
-  goToCardDetail(clickedCard: Card) {
-    this.router.navigate(['cards', clickedCard.id]);
+  goToCardDetail(clickedCard) {
+    this.router.navigate(['cards', clickedCard.$key]);
   }
 
   onHandDrop(e: DropEvent) {
