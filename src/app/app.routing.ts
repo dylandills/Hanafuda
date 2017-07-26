@@ -39,7 +39,7 @@ const appRoutes: Routes = [
     component: PlayerComponent
   },
   {
-    path: 'collected-suits',
+    path: 'card/:flower',
     component: CollectedSuitsComponent
   }
  ];

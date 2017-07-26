@@ -286,5 +286,10 @@
     "points": "20",
     "id": "48",
     "image": "src/assets/images/Kiri-Phoenix.jpg"
+  }],
+  "players": [{
+    "name": "",
+    "birthMonth": "",
+    "score": ""
   }]
 }

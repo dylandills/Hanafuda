@@ -1,7 +1,7 @@
 <div>
   <div>
     <div class="player1" *ngFor="let card of cards | async">
-      <img src={{card.image}} width="100px">
+      <div class="row"><img src={{card?.image}} width="100px"></div>
     </div>
 
 

@@ -1,13 +1,37 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Injectable()
 export class PlayerService {
-  player: Array<any>;
+  players: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.players = database.list('players');
+   }
+
+  getPlayers() {
+    return this.players;
+  }
 
   addPlayer(newPlayer: Player) {
-      this.player.push(newPlayer);
-    }
+    this.players.push(newPlayer);
+  }
+
+  getPlayerById(playerId: string) {
+    return this.database.object('players/' + playerId);
+  }
+
+  updatePlayer(localUpdatedPlayer){
+  const playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
+  playerEntryInFirebase.update({name: localUpdatedPlayer.name,
+                              birthMonth: localUpdatedPlayer.birthMonth,
+                              score: localUpdatedPlayer.score});
+  }
+
+  deletePlayer(localPlayerToDelete){
+    const playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
+    playerEntryInFirebase.remove();
+  }
 }
