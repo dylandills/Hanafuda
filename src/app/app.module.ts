@@ -11,7 +11,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { AppComponent } from './app.component';
-//import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardComponent } from './card/card.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
@@ -34,7 +33,6 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     PlayfieldComponent,
-    //CardDetailComponent,
     CardComponent,
     WelcomeComponent,
     HowToPlayComponent,
