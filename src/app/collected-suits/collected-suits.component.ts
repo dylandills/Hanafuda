@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { Card } from '../card.model';
 import { CardService } from '../card.service';
-import {DropEvent} from 'ng2-drag-drop';
+import { DropEvent } from 'ng2-drag-drop';
 
 @Component({
   selector: 'app-collected-suits',
