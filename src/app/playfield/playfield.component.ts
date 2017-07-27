@@ -15,8 +15,6 @@ export class PlayfieldComponent {
   playfield: any[] = [];
   hand: any[] = [];
 
-  constructor () { }
-
   onHandDrop(e: DropEvent) {
     this.hand.push(e.dragData);
     this.removeCard(e.dragData, this.playfield)
