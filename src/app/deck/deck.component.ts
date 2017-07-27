@@ -4,6 +4,7 @@ import { CardService } from '../card.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-deck',
@@ -13,13 +14,14 @@ import { Router } from '@angular/router';
 })
 export class DeckComponent implements OnInit {
 
-  cards: Card[];
+  cards: FirebaseListObservable<any[]>;
+
   deck: any[] = [];
   shuffleDeck: any[] = [];
 
   // goToCardDetail variables.
-  cardId: number;
-  cardToDisplay: Card;
+  cardId: string;
+  cardToDisplay;
 
   constructor(
     private route: ActivatedRoute,
@@ -43,13 +45,8 @@ export class DeckComponent implements OnInit {
       var rand = Math.floor(Math.random() *i);
       var topCard = this.deck[rand];
       this.shuffleDeck.push(topCard);
-      this.deck.splice(this.deck.indexOf(topCard), 1);
+      this.deck.splice(this.deck.indexOf(topCard), 1); //Remove a card.
     }
   }
-
-  // Get detailed information about a specific card.
-  // goToCardDetail(clickedCard: Card) {
-  //   this.router.navigate(['cards', clickedCard.id]);
-  // }
 
 }

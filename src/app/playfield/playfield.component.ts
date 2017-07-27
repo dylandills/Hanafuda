@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Card } from '../card.model';
 import { Player } from '../player.model';
 import { DropEvent} from 'ng2-drag-drop';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-playfield',
@@ -9,16 +10,12 @@ import { DropEvent} from 'ng2-drag-drop';
   styleUrls: ['./playfield.component.scss'],
 })
 
-export class PlayfieldComponent implements OnInit {
-
+export class PlayfieldComponent {
+  cards: FirebaseListObservable<any[]>; //May not be needed here...
   playfield: any[] = [];
   hand: any[] = [];
 
   constructor () { }
-
-  ngOnInit() {
-
-  }
 
   onHandDrop(e: DropEvent) {
     this.hand.push(e.dragData);

@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Card } from './card.model';
-import { CARDS } from './mock-cards';
 import { Player } from './player.model';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+//import { CARDS } from './mock-cards';
 
 @Injectable()
 export class CardService {
+  cards: FirebaseListObservable<any[]>;
   shuffleDeck: any[] = [];
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.cards = database.list('cards');
+  }
 
+  // Retrieve list of cards from Firebase.
   getCards() {
-    return CARDS;
+    return this.cards;
   }
 
   dealCards(localPlayers) {
@@ -24,16 +29,8 @@ export class CardService {
     return this.shuffleDeck;
   }
 
-  getCardById(cardId: number){
-   for (var i = 0; i <= CARDS.length - 1; i++) {
-     if (CARDS[i].id === cardId) {
-       return CARDS[i];
-     }
-   }
- }
-
-  // Get a particular card by their unique id.
-  // getCardById(cardId: string) {
-  //   return this.database.object('cards/' + cardId);
-  // }
+  //Get a particular card by their unique id.
+  getCardById(cardId: string) {
+    return this.database.object('cards/' + cardId);
+  }
 }
