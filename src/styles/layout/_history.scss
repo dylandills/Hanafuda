@@ -1,0 +1,9 @@
+.history {
+  margin-top: 40px;
+  padding: 3em;
+  @include content-body;
+}
+
+h2 {
+  @include header-shadow;
+}

@@ -1,0 +1,10 @@
+.rules {
+  margin-top: 40px;
+  padding: 3em;
+  text-align: center;
+  @include content-body;
+}
+
+h2 {
+  @include header-shadow;
+}

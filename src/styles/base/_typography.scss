@@ -1,0 +1,28 @@
+/*Welcome Component Typography*/
+.welcome-container {
+  font-weight: bold;
+}
+h2 {
+  font-size: 35px;
+}
+a button {
+  font-size: 20px;
+}
+label {
+  font-size: 20px;
+}
+
+/*About Component*/
+.about-us {
+  font-size: $main-font-size;
+}
+
+/*History Components*/
+.history {
+  font-size: $main-font-size;
+}
+
+/*How-To*/
+.rules {
+  font-size: $main-font-size;
+}

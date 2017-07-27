@@ -39,3 +39,13 @@ ul {
 	box-sizing:padding-box;
 	transition: all 500ms ease;
 }
+
+button.clickable-button {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
