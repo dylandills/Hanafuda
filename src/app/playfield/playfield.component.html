@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="deck-area">
-      <div class="deck-cards"></div>
+    <div class="player1" *ngFor="let card of cards">
+      <p>{{card.kind}}</p>
+      <img src={{card.image}} width="100px">
     </div>
     <div class="play-area">
       <div id="card_samples">
