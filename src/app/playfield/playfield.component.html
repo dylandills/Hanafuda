@@ -1,9 +1,15 @@
 
-    <div class="play-area">
-      <div id="card_samples">
+     <div class="play-area">
+      <!--<div id="card_samples"> -->
         <div class="playerOne" *ngFor="let card of cards | async">
-          <div><img src="{{card.image}}" alt=""/></div>
+          <img src="{{card.image}}" width="100px" />
         </div>
+        <div class="play-field"></div>
+
+        <div class="playerTwo" *ngFor="let card of cards | async">
+          <img src="{{card.image}}" width="100px"/>
+        </div>
+      </div>
         <!-- <div class="play-field">
           <div class="card-field"></div>
           <div class="card-field"></div>
@@ -70,5 +76,5 @@
           <div class="baby-cards"></div>
           <div class="baby-cards"></div>
         </div> -->
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
