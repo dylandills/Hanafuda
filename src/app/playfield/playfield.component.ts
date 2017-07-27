@@ -38,9 +38,9 @@ export class PlayfieldComponent implements OnInit {
     }
   }
 
-  goToCardDetail(clickedCard: Card) {
-    this.router.navigate(['cards', clickedCard.id]);
-  }
+  // goToCardDetail(clickedCard: Card) {
+  //   this.router.navigate(['cards', clickedCard.id]);
+  // }
 
   dealCards(){
     this.shuffleDeck = this.cardService.dealCards(this.localPlayers);
