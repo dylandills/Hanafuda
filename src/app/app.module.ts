@@ -5,13 +5,13 @@ import { HttpModule } from '@angular/http';
 import {ViewEncapsulation} from '@angular/core';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { routing } from './app.routing';
-// import { masterFirebaseConfig } from './api-keys';
-// import { AngularFireModule } from 'angularfire2';
-// import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { AppComponent } from './app.component';
-import { CardDetailComponent } from './card-detail/card-detail.component';
+//import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardComponent } from './card/card.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HowToPlayComponent } from './how-to-play/how-to-play.component';
@@ -21,19 +21,20 @@ import { PlayfieldComponent } from './playfield/playfield.component';
 import { PlayerComponent } from './player/player.component';
 import { CollectedSuitsComponent } from './collected-suits/collected-suits.component';
 import { PlayerTurnPipe } from './playerTurn.pipe';
+import { DeckComponent } from './deck/deck.component';
 
-// export const firebaseConfig = {
-//   apiKey: masterFirebaseConfig.apiKey,
-//   authDomain: masterFirebaseConfig.authDomain,
-//   databaseURL: masterFirebaseConfig.databaseURL,
-//   storageBucket: masterFirebaseConfig.storageBucket
-// };
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayfieldComponent,
-    CardDetailComponent,
+    //CardDetailComponent,
     CardComponent,
     WelcomeComponent,
     HowToPlayComponent,
@@ -41,7 +42,8 @@ import { PlayerTurnPipe } from './playerTurn.pipe';
     HistoryComponent,
     PlayerComponent,
     CollectedSuitsComponent,
-    PlayerTurnPipe
+    PlayerTurnPipe,
+    DeckComponent
     ],
   imports: [
     BrowserModule,
@@ -49,8 +51,8 @@ import { PlayerTurnPipe } from './playerTurn.pipe';
     HttpModule,
     Ng2DragDropModule.forRoot(),
     routing,
-    // AngularFireModule.initializeApp(firebaseConfig),
-    // AngularFireDatabaseModule
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
 
   ],
   providers: [],

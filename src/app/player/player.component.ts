@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { Card } from '../card.model';
 import { CardService } from '../card.service';
-import { PlayerService} from '../player.service'
+import { PlayerService} from '../player.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
@@ -21,10 +23,10 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
 
   }
+
   //deal cards to players.
   dealCards() {
     this.hand = this.cardService.dealCards(this.localPlayers);
     return this.hand;
   }
-
 }
