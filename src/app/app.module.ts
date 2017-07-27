@@ -9,7 +9,6 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-
 import { AppComponent } from './app.component';
 //import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardComponent } from './card/card.component';
@@ -34,7 +33,6 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     PlayfieldComponent,
-    //CardDetailComponent,
     CardComponent,
     WelcomeComponent,
     HowToPlayComponent,
