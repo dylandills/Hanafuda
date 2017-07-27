@@ -1,36 +1,16 @@
-    <div class="player1" *ngFor="let card of cards">
-      <p>{{card.kind}}</p>
-      <img src={{card.image}} width="100px">
-    </div>
+
     <div class="play-area">
       <div id="card_samples">
-        <div class="playerOne">
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
+        <div class="playerOne" *ngFor="let card of cards | async">
+          <div><img src="{{card.image}}" alt=""/></div>
         </div>
-        <div class="play-field">
+        <!-- <div class="play-field">
           <div class="card-field"></div>
           <div class="card-field"></div>
           <div class="card-field"></div>
           <div class="card-field"></div>
           <div class="card-field"></div>
           <div class="card-field"></div>
-        </div>
-        <div class="playerTwo">
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
-          <div><img src="" alt=""/></div>
         </div>
       </div>
     </div>
@@ -89,6 +69,6 @@
           <div class="baby-cards"></div>
           <div class="baby-cards"></div>
           <div class="baby-cards"></div>
-        </div>
+        </div> -->
       </div>
     </div>

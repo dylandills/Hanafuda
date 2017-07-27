@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Card } from './card.model';
 import { Player } from './player.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-//import { CARDS } from './mock-cards';
 
 @Injectable()
 export class CardService {
@@ -10,7 +9,11 @@ export class CardService {
   shuffleDeck: any[] = [];
 
   constructor(private database: AngularFireDatabase) {
-    this.cards = database.list('cards');
+    this.cards = database.list('cards', {
+      query: {
+        limitToFirst: 8
+      }
+    });
   }
 
   // Retrieve list of cards from Firebase.
